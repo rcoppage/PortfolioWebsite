@@ -8,13 +8,13 @@ const Contact = () => (
       <div className="max-w-xl mx-auto">
         <div className="flex justify-center space-x-8 mb-8">
           {/* TODO: Replace with your social media links */}
-          <a href="https://github.com/your-username" className="hover:text-blue-600">
+          <a href="https://github.com/rcoppage" target="_blank" className="hover:text-blue-600">
             <Github size={24} />
           </a>
-          <a href="https://linkedin.com/in/your-profile" className="hover:text-blue-600">
+          <a href="https://www.linkedin.com/in/robert-coppage-390006311/" target="_blank" className="hover:text-blue-600">
             <Linkedin size={24} />
           </a>
-          <a href="mailto:your.email@example.com" className="hover:text-blue-600">
+          <a href="mailto:reececoppage@gmail.com" className="hover:text-blue-600">
             <Mail size={24} />
           </a>
         </div>

@@ -1,2 +1,0 @@
-ref images as
-/images/your-image.jpg

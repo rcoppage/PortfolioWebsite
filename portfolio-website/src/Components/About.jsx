@@ -1,4 +1,5 @@
 import React from 'react';
+import headshot from '../assets/Headshot.jpg';
 
 const About = () => (
   <section id="about" className="py-20">
@@ -8,14 +9,8 @@ const About = () => (
         <div className="space-y-6">
           <div className="text-center md:text-left">
             <div className="w-48 h-48 mx-auto md:mx-0 mb-6 rounded-full overflow-hidden bg-gray-200">
-              {/* TODO: Replace with your profile picture
-                  Options:
-                  1. If using public folder: src="/images/your-photo.jpg"
-                  2. If importing: import profilePic from '../assets/your-photo.jpg'
-                  Then use: src={profilePic}
-              */}
               <img
-                src="/api/placeholder/200/200"
+                src={headshot}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -23,35 +18,76 @@ const About = () => (
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Who I Am</h3>
-            {/* TODO: Update with your bio */}
             <p className="text-gray-600">
-              I'm a passionate developer with expertise in modern web technologies.
-              I love creating beautiful and functional applications that solve real-world problems.
+              I am a Junior Computer Science student at Georgia Tech, specializing in Intelligence and Devices. 
+              As a skilled software developer, I have hands-on experience in Java, Python, and other programming languages, 
+              with a strong foundation in problem-solving and software design principles. I thrive in collaborative team environments,
+              leveraging my critical thinking skills to tackle complex challenges and deliver impactful solutions.
+              I am currently seeking a software engineering internship where I can further refine my technical expertise, 
+              contribute to cutting-edge projects, and collaborate with a dynamic team to drive innovation.
             </p>
           </div>
         </div>
         
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">My Skills</h3>
-            {/* TODO: Update with your skills */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-100 p-4 rounded">React</div>
-              <div className="bg-gray-100 p-4 rounded">Node.js</div>
-              <div className="bg-gray-100 p-4 rounded">TypeScript</div>
-              <div className="bg-gray-100 p-4 rounded">Python</div>
+            <h3 className="text-xl font-semibold mb-4">Technical Skills</h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-medium mb-2">Programming Languages</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gray-100 px-3 py-1 rounded">Java</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">C#</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">JavaScript</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">Python</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">HTML</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">CSS</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-medium mb-2">Technologies & Frameworks</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gray-100 px-3 py-1 rounded">React</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">Node.js</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">Firebase</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-medium mb-2">Development Tools</h4>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gray-100 px-3 py-1 rounded">Android Studio</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">Unity</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">IntelliJ</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">Visual Studio Code</span>
+                  <span className="bg-gray-100 px-3 py-1 rounded">Visual Studio</span>
+                </div>
+              </div>
             </div>
           </div>
           
           <div>
             <h3 className="text-xl font-semibold mb-4">Relevant Coursework</h3>
-            {/* TODO: Update with your courses */}
-            <div className="grid gap-3">
+            <div className="grid grid-cols-2 gap-3">
               <div className="bg-gray-50 p-4 rounded shadow-sm">
-                <h4 className="font-medium">Data Structures and Algorithms</h4>
-                <p className="text-sm text-gray-600">Course Code: CS201</p>
+                <h4 className="font-medium">Linear Algebra</h4>
               </div>
-              {/* Add more courses as needed */}
+              <div className="bg-gray-50 p-4 rounded shadow-sm">
+                <h4 className="font-medium">Intro to Artificial Intelligence</h4>
+              </div>
+              <div className="bg-gray-50 p-4 rounded shadow-sm">
+                <h4 className="font-medium">Data Structures</h4>
+              </div>
+              <div className="bg-gray-50 p-4 rounded shadow-sm">
+                <h4 className="font-medium">Object and Design</h4>
+              </div>
+              <div className="bg-gray-50 p-4 rounded shadow-sm">
+                <h4 className="font-medium">Computer Organization and Programming</h4>
+              </div>
+              <div className="bg-gray-50 p-4 rounded shadow-sm">
+                <h4 className="font-medium">Perception and Robotics</h4>
+              </div>
             </div>
           </div>
         </div>
