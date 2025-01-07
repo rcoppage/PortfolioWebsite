@@ -8,15 +8,15 @@ const Projects = () => {
       description: "WanderSync is a collaborative travel management application developed using Android Studio, Java, and Firebase. The app features real-time trip synchronization, secure user authentication, and comprehensive travel planning tools. Key features include interactive itinerary creation, accommodation booking management, dining reservation tracking, and a unique travel community platform where users can share their experiences. Implemented using MVVM architecture pattern for enhanced scalability and testability, while utilizing Firebase for seamless real-time data synchronization and user authentication.",
       tags: ["Java", "Android Studio", "Firebase"],
       youtubeId: "NedWm73jRhI",
-      githubLink: "https://github.com/yourusername/project1",
+      githubLink: "https://github.com/tmalayvong/CS2340C_Team51",
       websiteLink: "https://tmalayvong.github.io/CS2340C_Team51/"
     },
     {
-      title: "Other Project",
-      description: "Project description here...",
+      title: "Portfolio Website",
+      description: "The website you are on now! Made using React with Javascript and CSS.",
       tags: ["React", "Node.js", "MongoDB"],
       youtubeId: "video-id",
-      githubLink: "https://github.com/yourusername/project2"
+      githubLink: "https://github.com/rcoppage/PortfolioWebsite"
       // No websiteLink for this project, so it will only show GitHub button
     }
   ];
