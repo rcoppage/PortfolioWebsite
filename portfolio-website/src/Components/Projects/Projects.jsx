@@ -13,8 +13,8 @@ const Projects = () => {
     },
     {
       title: "Portfolio Website",
-      description: "The website you are on now! Made using React with Javascript and CSS.",
-      tags: ["React", "Node.js", "MongoDB"],
+      description: "This very website you're exploring! Built with React, leveraging modern JavaScript and styled with CSS for a clean, responsive design.",
+      tags: ["React", "Node.js", "JavaScript", "CSS"],
       youtubeId: "video-id",
       githubLink: "https://github.com/rcoppage/PortfolioWebsite"
       // No websiteLink for this project, so it will only show GitHub button
