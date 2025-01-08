@@ -1,17 +1,25 @@
 import React from 'react';
 import { Github, Globe } from 'lucide-react';
+import MediaDisplay from './MediaDisplay'; // Import the new MediaDisplay component
 
-const ProjectCard = ({ title, description, tags, youtubeId, githubLink, websiteLink }) => (
+const ProjectCard = ({ 
+  title, 
+  description, 
+  tags, 
+  youtubeId, 
+  imageUrl, // Add this prop
+  githubLink, 
+  websiteLink 
+}) => (
   <div className="bg-white p-8 rounded-lg shadow-md flex flex-col h-full">
     <div className="w-full aspect-video mb-6">
-      <iframe
-        className="w-full h-full rounded-lg"
-        src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
+      <MediaDisplay 
+         youtubeVideoId={youtubeId}
+        imageUrl={imageUrl}
         title={`${title} demo`}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
+        className="rounded-lg"
+      />
+</div>
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-600 mb-6 flex-grow">{description}</p>
     <div className="space-y-4">

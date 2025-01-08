@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import reactlogo from '/assets/reactlogo.png';
 
 const Projects = () => {
   const projects = [
@@ -15,7 +16,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "This very website you're exploring! Built with React, leveraging modern JavaScript and styled with CSS for a clean, responsive design.",
       tags: ["React", "Node.js", "JavaScript", "CSS"],
-      youtubeId: "video-id",
+      imageUrl: "/assets/reactlogo.png", // Note the path change
       githubLink: "https://github.com/rcoppage/PortfolioWebsite"
       // No websiteLink for this project, so it will only show GitHub button
     }
