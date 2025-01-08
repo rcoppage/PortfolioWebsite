@@ -68,28 +68,28 @@ const About = () => (
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold mb-4">Relevant Coursework</h3>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="bg-gray-50 p-4 rounded shadow-sm">
-                <h4 className="font-medium">Linear Algebra</h4>
-              </div>
-              <div className="bg-gray-50 p-4 rounded shadow-sm">
-                <h4 className="font-medium">Intro to Artificial Intelligence</h4>
-              </div>
-              <div className="bg-gray-50 p-4 rounded shadow-sm">
-                <h4 className="font-medium">Data Structures</h4>
-              </div>
-              <div className="bg-gray-50 p-4 rounded shadow-sm">
-                <h4 className="font-medium">Object and Design</h4>
-              </div>
-              <div className="bg-gray-50 p-4 rounded shadow-sm">
-                <h4 className="font-medium">Computer Organization and Programming</h4>
-              </div>
-              <div className="bg-gray-50 p-4 rounded shadow-sm">
-                <h4 className="font-medium">Perception and Robotics</h4>
-              </div>
+          <h3 className="text-xl font-semibold mb-4">Relevant Coursework</h3>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Linear Algebra</h4>
+            </div>
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Intro to Artificial Intelligence</h4>
+            </div>
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Data Structures</h4>
+            </div>
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Object and Design</h4>
+            </div>
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Computer Organization and Programming</h4>
+            </div>
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Perception and Robotics</h4>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
