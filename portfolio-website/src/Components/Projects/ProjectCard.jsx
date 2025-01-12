@@ -1,25 +1,27 @@
 import React from 'react';
 import { Github, Globe } from 'lucide-react';
-import MediaDisplay from './MediaDisplay'; // Import the new MediaDisplay component
+import MediaDisplay from './MediaDisplay';
 
 const ProjectCard = ({ 
   title, 
   description, 
   tags, 
   youtubeId, 
-  imageUrl, // Add this prop
+  imageUrl, 
+  imageClassName = '', // Accept imageClassName prop
   githubLink, 
   websiteLink 
 }) => (
   <div className="bg-white p-8 rounded-lg shadow-md flex flex-col h-full">
     <div className="w-full aspect-video mb-6">
       <MediaDisplay 
-         youtubeVideoId={youtubeId}
+        youtubeVideoId={youtubeId}
         imageUrl={imageUrl}
         title={`${title} demo`}
         className="rounded-lg"
+        imageClassName={imageClassName} // Pass it to MediaDisplay
       />
-</div>
+    </div>
     <h3 className="text-2xl font-bold mb-4">{title}</h3>
     <p className="text-gray-600 mb-6 flex-grow">{description}</p>
     <div className="space-y-4">

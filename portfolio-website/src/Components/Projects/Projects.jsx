@@ -12,6 +12,7 @@ const Projects = () => {
       React-based frontend, Dayweave provides a seamless experience. It allows users to add assignments, automatically 
       schedule time for them, and adjusts weekly based on user feedback to ensure an optimized workload.`,
       tags: ["Python", "Firebase", "MongoDB", "React", "Node.js", "JavaScript", "CSS"],
+      imageClassName: "w-64 h-64", // Custom image size
       imageUrl: "/assets/CanvasLogo.png",
       githubLink: "https://github.com/DayWeave/DayWeave"
       // No websiteLink for this project, so it will only show GitHub button
@@ -21,7 +22,8 @@ const Projects = () => {
       description: `This very website you're exploring! Built with React, 
       leveraging modern JavaScript and styled with CSS for a clean, responsive design. `,
       tags: ["React", "Node.js", "JavaScript", "CSS"],
-      imageUrl: "/assets/reactlogo.png", // Note the path change
+      imageUrl: "/assets/reactlogo.png",
+      imageClassName: "w-64 h-64", // Custom image size
       githubLink: "https://github.com/rcoppage/PortfolioWebsite"
       // No websiteLink for this project, so it will only show GitHub button
     },
