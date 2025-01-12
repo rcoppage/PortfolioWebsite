@@ -1,24 +1,42 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import reactlogo from '/assets/reactlogo.png';
+import CanvasLogo from '/assets/CanvasLogo.png'
 
 const Projects = () => {
   const projects = [
     {
-      title: "WanderSync",
-      description: "WanderSync is a collaborative travel management application developed using Android Studio, Java, and Firebase. The app features real-time trip synchronization, secure user authentication, and comprehensive travel planning tools. Key features include interactive itinerary creation, accommodation booking management, dining reservation tracking, and a unique travel community platform where users can share their experiences. Implemented using MVVM architecture pattern for enhanced scalability and testability, while utilizing Firebase for seamless real-time data synchronization and user authentication.",
-      tags: ["Java", "Android Studio", "Firebase"],
-      youtubeId: "NedWm73jRhI",
-      githubLink: "https://github.com/tmalayvong/CS2340C_Team51",
-      websiteLink: "https://tmalayvong.github.io/CS2340C_Team51/"
+      title: "DayWeave (In Development)",
+      description: `Dayweave is a smart scheduling platform that integrates Python with Canvas to automatically 
+      generate a personalized calendar. Using Firebase for secure authentication, MongoDB for user data, and a 
+      React-based frontend, Dayweave provides a seamless experience. It allows users to add assignments, automatically 
+      schedule time for them, and adjusts weekly based on user feedback to ensure an optimized workload.`,
+      tags: ["Python", "Firebase", "MongoDB", "React", "Node.js", "JavaScript", "CSS"],
+      imageUrl: "/assets/CanvasLogo.png",
+      githubLink: "https://github.com/DayWeave/DayWeave"
+      // No websiteLink for this project, so it will only show GitHub button
     },
     {
       title: "Portfolio Website",
-      description: "This very website you're exploring! Built with React, leveraging modern JavaScript and styled with CSS for a clean, responsive design.",
+      description: `This very website you're exploring! Built with React, 
+      leveraging modern JavaScript and styled with CSS for a clean, responsive design. `,
       tags: ["React", "Node.js", "JavaScript", "CSS"],
       imageUrl: "/assets/reactlogo.png", // Note the path change
       githubLink: "https://github.com/rcoppage/PortfolioWebsite"
       // No websiteLink for this project, so it will only show GitHub button
+    },
+    {
+      title: "WanderSync",
+      description: `WanderSync is a collaborative travel management application developed using Android Studio,
+       Java, and Firebase. The app features real-time trip synchronization, secure user authentication, and comprehensive 
+       travel planning tools. Key features include interactive itinerary creation, accommodation booking management, 
+       dining reservation tracking, and a unique travel community platform where users can share their experiences. 
+       Implemented using MVVM architecture pattern for enhanced scalability and testability, while utilizing Firebase 
+       for seamless real-time data synchronization and user authentication.`,
+      tags: ["Java", "Android Studio", "Firebase"],
+      youtubeId: "NedWm73jRhI",
+      githubLink: "https://github.com/tmalayvong/CS2340C_Team51",
+      websiteLink: "https://tmalayvong.github.io/CS2340C_Team51/"
     }
   ];
 
