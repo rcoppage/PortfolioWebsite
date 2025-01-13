@@ -88,6 +88,12 @@ const About = () => (
             <div className="bg-gray-100 p-4 rounded shadow-sm">
               <h4 className="font-medium">Perception and Robotics</h4>
             </div>
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Discrete Mathematics</h4>
+            </div>
+            <div className="bg-gray-100 p-4 rounded shadow-sm">
+              <h4 className="font-medium">Design & Analysis of Algorithms</h4>
+            </div>
           </div>
         </div>
         </div>
