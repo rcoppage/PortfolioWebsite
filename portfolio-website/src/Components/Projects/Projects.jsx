@@ -18,6 +18,18 @@ const Projects = () => {
       // No websiteLink for this project, so it will only show GitHub button
     },
     {
+      title: "RedireX",
+      description: `Dayweave is a smart scheduling platform that integrates Python with Canvas to automatically 
+      generate a personalized calendar. Using Firebase for secure authentication, MongoDB for user data, and a 
+      React-based frontend, Dayweave provides a seamless experience. It allows users to add assignments, automatically 
+      schedule time for them, and adjusts weekly based on user feedback to ensure an optimized workload.`,
+      tags: ["Python", "Firebase", "MongoDB", "React", "Node.js", "JavaScript", "CSS"],
+      imageClassName: "w-64 h-64", // Custom image size
+      imageUrl: "/assets/CanvasLogo.png",
+      githubLink: "https://github.com/itsdylon/redirx"
+      // No websiteLink for this project, so it will only show GitHub button
+    },
+    {
       title: "Portfolio Website",
       description: `This very website you're exploring! Built with React, 
       leveraging modern JavaScript and styled with CSS for a clean, responsive design. `,
