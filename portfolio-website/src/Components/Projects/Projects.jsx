@@ -26,7 +26,7 @@ const Projects = () => {
       new URLs. This ensures minimal disruption, preserves SEO rankings, and enhances user experience during domain 
       changes or site restructures. RedireX automates the redirection process with precision, making website transitions 
       effortless and efficient.`,
-      tags: ["Python", "React", "JavaScript", "CSS"],
+      tags: ["Python", "React", "JavaScript", "CSS", "HTML"],
       imageClassName: "w-48 h-48", // Custom image size
       imageUrl: "/assets/PythonLogo.png",
       githubLink: "https://github.com/itsdylon/redirx"
@@ -36,7 +36,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: `This very website you're exploring! Built with React, 
       leveraging modern JavaScript and styled with CSS for a clean, responsive design. `,
-      tags: ["React", "Node.js", "JavaScript", "CSS"],
+      tags: ["React", "Node.js", "JavaScript", "CSS", "HTML"],
       imageUrl: "/assets/reactlogo.png",
       imageClassName: "w-64 h-64", // Custom image size
       githubLink: "https://github.com/rcoppage/PortfolioWebsite"
