@@ -26,7 +26,7 @@ const Projects = () => {
       new URLs. This ensures minimal disruption, preserves SEO rankings, and enhances user experience during domain 
       changes or site restructures. RedireX automates the redirection process with precision, making website transitions 
       effortless and efficient.`,
-      tags: ["Python", "Firebase", "React", "Node.js", "JavaScript", "CSS"],
+      tags: ["Python", "React", "JavaScript", "CSS"],
       imageClassName: "w-48 h-48", // Custom image size
       imageUrl: "/assets/PythonLogo.png",
       githubLink: "https://github.com/itsdylon/redirx"
