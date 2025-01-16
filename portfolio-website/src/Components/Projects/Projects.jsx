@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import ReactLogo from '/assets/ReactLogo.png';
+import ReactLogo from '/assets/reactlogo.png';
 import CanvasLogo from '/assets/CanvasLogo.png'
 import PythonLogo from '/assets/PythonLogo.png';
 
@@ -37,7 +37,7 @@ const Projects = () => {
       description: `This very website you're exploring! Built with React, 
       leveraging modern JavaScript and styled with CSS for a clean, responsive design. `,
       tags: ["React", "Node.js", "JavaScript", "CSS"],
-      imageUrl: "/assets/ReactLogo.png",
+      imageUrl: "/assets/reactlogo.png",
       imageClassName: "w-64 h-64", // Custom image size
       githubLink: "https://github.com/rcoppage/PortfolioWebsite"
       // No websiteLink for this project, so it will only show GitHub button
