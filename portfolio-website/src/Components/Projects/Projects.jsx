@@ -1,7 +1,8 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import reactlogo from '/assets/reactlogo.png';
+import ReactLogo from '/assets/ReactLogo.png';
 import CanvasLogo from '/assets/CanvasLogo.png'
+import PythonLogo from '/assets/PythonLogo.png';
 
 const Projects = () => {
   const projects = [
@@ -18,11 +19,25 @@ const Projects = () => {
       // No websiteLink for this project, so it will only show GitHub button
     },
     {
+      title: "RedireX",
+      description: `RedireX is a dynamic link redirection platform designed to facilitate seamless 
+      website migrations. Built with React for the web interface and powered by Python for scraping 
+      and redirection, RedireX efficiently extracts old URLs from a website and redirects them to the corresponding 
+      new URLs. This ensures minimal disruption, preserves SEO rankings, and enhances user experience during domain 
+      changes or site restructures. RedireX automates the redirection process with precision, making website transitions 
+      effortless and efficient.`,
+      tags: ["Python", "Firebase", "React", "Node.js", "JavaScript", "CSS"],
+      imageClassName: "w-48 h-48", // Custom image size
+      imageUrl: "/assets/PythonLogo.png",
+      githubLink: "https://github.com/itsdylon/redirx"
+      // No websiteLink for this project, so it will only show GitHub button
+    },
+    {
       title: "Portfolio Website",
       description: `This very website you're exploring! Built with React, 
       leveraging modern JavaScript and styled with CSS for a clean, responsive design. `,
       tags: ["React", "Node.js", "JavaScript", "CSS"],
-      imageUrl: "/assets/reactlogo.png",
+      imageUrl: "/assets/ReactLogo.png",
       imageClassName: "w-64 h-64", // Custom image size
       githubLink: "https://github.com/rcoppage/PortfolioWebsite"
       // No websiteLink for this project, so it will only show GitHub button
