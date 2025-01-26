@@ -21,16 +21,16 @@ const Projects = () => {
     {
       title: "RedireX",
       description: `RedireX is a dynamic link redirection platform designed to facilitate seamless 
-      website migrations. Built with React for the web interface and powered by Python for scraping 
+      website migrations. The backend is on Google Cloud, and the platform is built with React for the web interface and powered by Python for scraping 
       and redirection, RedireX efficiently extracts old URLs from a website and redirects them to the corresponding 
       new URLs. This ensures minimal disruption, preserves SEO rankings, and enhances user experience during domain 
       changes or site restructures. RedireX automates the redirection process with precision, making website transitions 
       effortless and efficient.`,
-      tags: ["Python", "React", "JavaScript", "CSS", "HTML"],
+      tags: ["Python", "Google Cloud", "React", "JavaScript", "CSS", "HTML"],
       imageClassName: "w-48 h-48", // Custom image size
       imageUrl: "/assets/PythonLogo.png",
-      githubLink: "https://github.com/itsdylon/redirx"
-      // No websiteLink for this project, so it will only show GitHub button
+      githubLink: "https://github.com/itsdylon/redirx",
+      websiteLink: "https://redirx-iota.vercel.app/"
     },
     {
       title: "Portfolio Website",
