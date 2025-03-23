@@ -1,95 +1,114 @@
 import React from 'react';
 import headshot from '../assets/Headshot.jpg';
+import './About.css';
+
+const SkillTag = ({ children }) => (
+  <span className="skill-tag">{children}</span>
+);
+
+const CourseCard = ({ title }) => (
+  <div className="course-card">
+    <h4 className="card-title">{title}</h4>
+  </div>
+);
+
+const SectionTitle = ({ children }) => (
+  <h3 className="section-title">{children}</h3>
+);
 
 const About = () => (
-  <section id="about" className="py-20">
-    <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-      <div className="grid md:grid-cols-2 gap-12">
-        <div className="space-y-6">
-          <div className="text-center md:text-left">
-            <div className="w-48 h-48 mx-auto md:mx-0 mb-6 rounded-full overflow-hidden bg-gray-200">
-              <img
-                src={headshot}
-                alt="Profile"
-                className="w-full h-full object-cover"
-              />
+  <section id="about" className="about-section">
+    <div className="container">
+      <h2 className="main-title">
+        About Me
+        <div className="title-underline"></div>
+      </h2>
+      
+      <div className="two-columns">
+        {/* Left Column */}
+        <div className="column">
+          <div className="profile-wrapper">
+            <div className="profile-image">
+              <img src={headshot} alt="Profile" className="image" />
             </div>
           </div>
+          
           <div>
-            <h3 className="text-xl font-semibold mb-4">Who I Am</h3>
-            <p className="text-gray-600">
-              I am a Junior Computer Science student at Georgia Tech, specializing in Intelligence and Devices. 
-              As a skilled software developer, I have hands-on experience in Java, Python, and other programming languages, 
-              with a strong foundation in problem-solving and software design principles. I thrive in collaborative team environments,
-              leveraging my critical thinking skills to tackle complex challenges and deliver impactful solutions.
-              I am currently seeking a software engineering internship where I can further refine my technical expertise, 
-              contribute to cutting-edge projects, and collaborate with a dynamic team to drive innovation.
+            <SectionTitle>Who I Am</SectionTitle>
+            <p className="bio">
+              I am a Computer Science student at Georgia Tech, specializing in Intelligence and Systems/Architecture. 
+              As a skilled software developer, I have hands-on experience in multiple programming languages, 
+              with a strong foundation in problem-solving and software design principles.
+            </p>
+            <p className="bio">
+              Currently an Undergraduate Researcher at Georgia Tech working on AI-powered image recognition for campus mapping,
+              I also teach Java and Python programming as an instructor at Enchanting Math Academy. Previously, I founded and operated 
+              CircuitCycle, building custom computers from secondhand parts. I thrive in collaborative team environments and am 
+              passionate about developing innovative solutions to complex problems.
             </p>
           </div>
         </div>
         
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Technical Skills</h3>
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-medium mb-2">Programming Languages</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-gray-100 px-3 py-1 rounded">Java</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">C#</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">JavaScript</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">Python</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">HTML</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">CSS</span>
+        {/* Right Column */}
+        <div className="column">
+          <div className="skills-section">
+            <SectionTitle>Technical Skills</SectionTitle>
+            <div className="skills-group">
+              <div className="skill-category">
+                <h4 className="category-title">Programming Languages</h4>
+                <div className="tags-wrapper">
+                  <SkillTag>Java</SkillTag>
+                  <SkillTag>Python</SkillTag>
+                  <SkillTag>C#</SkillTag>
+                  <SkillTag>JavaScript</SkillTag>
+                  <SkillTag>HTML</SkillTag>
+                  <SkillTag>CSS</SkillTag>
+                  <SkillTag>SQL</SkillTag>
+                  <SkillTag>C</SkillTag>
+                  <SkillTag>Assembly</SkillTag>
                 </div>
               </div>
 
-              <div>
-                <h4 className="font-medium mb-2">Technologies & Frameworks</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-gray-100 px-3 py-1 rounded">React</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">Node.js</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">Firebase</span>
+              <div className="skill-category">
+                <h4 className="category-title">Technologies & Frameworks</h4>
+                <div className="tags-wrapper">
+                  <SkillTag>React.js</SkillTag>
+                  <SkillTag>Node.js</SkillTag>
+                  <SkillTag>Firebase</SkillTag>
+                  <SkillTag>TensorFlow</SkillTag>
+                  <SkillTag>MongoDB</SkillTag>
+                  <SkillTag>Amazon AWS</SkillTag>
                 </div>
               </div>
 
-              <div>
-                <h4 className="font-medium mb-2">Development Tools</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-gray-100 px-3 py-1 rounded">Android Studio</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">Unity</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">IntelliJ</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">Visual Studio Code</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded">Visual Studio</span>
+              <div className="skill-category">
+                <h4 className="category-title">Development Tools</h4>
+                <div className="tags-wrapper">
+                  <SkillTag>Android Studio</SkillTag>
+                  <SkillTag>Unity</SkillTag>
+                  <SkillTag>IntelliJ</SkillTag>
+                  <SkillTag>Visual Studio Code</SkillTag>
+                  <SkillTag>PyCharm</SkillTag>
+                  <SkillTag>Jupyter Notebooks</SkillTag>
+                  <SkillTag>Git</SkillTag>
+                  <SkillTag>Agile</SkillTag>
                 </div>
               </div>
             </div>
           </div>
           
-          <div>
-          <h3 className="text-xl font-semibold mb-4">Relevant Coursework</h3>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="bg-gray-100 p-4 rounded shadow-sm">
-              <h4 className="font-medium">Linear Algebra</h4>
-            </div>
-            <div className="bg-gray-100 p-4 rounded shadow-sm">
-              <h4 className="font-medium">Intro to Artificial Intelligence</h4>
-            </div>
-            <div className="bg-gray-100 p-4 rounded shadow-sm">
-              <h4 className="font-medium">Data Structures</h4>
-            </div>
-            <div className="bg-gray-100 p-4 rounded shadow-sm">
-              <h4 className="font-medium">Object and Design</h4>
-            </div>
-            <div className="bg-gray-100 p-4 rounded shadow-sm">
-              <h4 className="font-medium">Computer Organization and Programming</h4>
-            </div>
-            <div className="bg-gray-100 p-4 rounded shadow-sm">
-              <h4 className="font-medium">Perception and Robotics</h4>
+          <div className="courses-section">
+            <SectionTitle>Relevant Coursework</SectionTitle>
+            <div className="courses-grid">
+              <CourseCard title="Data Structures & Algorithms" />
+              <CourseCard title="Objects & Design" />
+              <CourseCard title="Computer Organization & Programming" />
+              <CourseCard title="Linear Algebra" />
+              <CourseCard title="Artificial Intelligence" />
+              <CourseCard title="Design & Analysis of Algorithms" />
+              <CourseCard title="Discrete Mathematics" />
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

@@ -7,6 +7,20 @@ import PythonLogo from '/assets/PythonLogo.png';
 const Projects = () => {
   const projects = [
     {
+      title: "Budgetly",
+      description: `Budgetly is a comprehensive personal finance platform that transforms traditional budgeting with 
+      intelligent analytics and AI-powered insights. Built on the MERN stack with Firebase for secure authentication, 
+      it offers goal-based savings calculators, customizable budget templates, AI meal planning based on dietary preferences 
+      and budget constraints, and machine learning stock recommendations using PyTorch. Developed by our team inspired by 
+      our own financial challenges during college, Budgetly goes beyond simple expense tracking to provide actionable 
+      financial guidance through an integrated ecosystem hosted on AWS via MongoAtlas, with real-time updates 
+      via WebSocket implementation.`,
+      tags: ["MongoDB Atlas", "Firebase", "PyTorch", "React", "Node", "Express", "Python", "JavaScript"],
+      youtubeId: "GPAKiE4Bozk",
+      githubLink: "https://github.com/rcoppage/Hacklytics2025",
+      websiteLink: "https://devpost.com/software/pocketwise"
+    },
+    {
       title: "DayWeave (In Development)",
       description: `Dayweave is a smart scheduling platform that integrates Python with Canvas to automatically 
       generate a personalized calendar. Using Firebase for secure authentication, MongoDB for user data, and a 
