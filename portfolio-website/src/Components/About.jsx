@@ -37,14 +37,12 @@ const About = () => (
             <SectionTitle>Who I Am</SectionTitle>
             <p className="bio">
               I am a Computer Science student at Georgia Tech, specializing in Intelligence and Systems/Architecture. 
-              As a skilled software developer, I have hands-on experience in multiple programming languages, 
-              with a strong foundation in problem-solving and software design principles.
             </p>
             <p className="bio">
-              Currently an Undergraduate Researcher at Georgia Tech working on AI-powered image recognition for campus mapping,
-              I also teach Java and Python programming as an instructor at Enchanting Math Academy. Previously, I founded and operated 
-              CircuitCycle, building custom computers from secondhand parts. I thrive in collaborative team environments and am 
-              passionate about developing innovative solutions to complex problems.
+            Currently, I work as an Applications Engineer at Waystar and as an Undergraduate Researcher at Georgia Tech, developing AI-powered image recognition for 
+            campus mapping. I recently taught Java and Python programming as an instructor at Enchanting Math Academy. Previously, I founded and operated CircuitCycle, 
+            where I built custom computers from secondhand parts. I thrive in collaborative team environments and am passionate about developing innovative solutions to
+            complex problems.
             </p>
           </div>
         </div>
@@ -59,6 +57,7 @@ const About = () => (
                 <div className="tags-wrapper">
                   <SkillTag>Java</SkillTag>
                   <SkillTag>Python</SkillTag>
+                  <SkillTag>PHP</SkillTag>
                   <SkillTag>C#</SkillTag>
                   <SkillTag>JavaScript</SkillTag>
                   <SkillTag>HTML</SkillTag>
@@ -73,6 +72,7 @@ const About = () => (
                 <h4 className="category-title">Technologies & Frameworks</h4>
                 <div className="tags-wrapper">
                   <SkillTag>React.js</SkillTag>
+                  <SkillTag>Vue.js</SkillTag>
                   <SkillTag>Node.js</SkillTag>
                   <SkillTag>Firebase</SkillTag>
                   <SkillTag>TensorFlow</SkillTag>
@@ -84,6 +84,7 @@ const About = () => (
               <div className="skill-category">
                 <h4 className="category-title">Development Tools</h4>
                 <div className="tags-wrapper">
+                  <SkillTag>Kubernetes</SkillTag>
                   <SkillTag>Android Studio</SkillTag>
                   <SkillTag>Unity</SkillTag>
                   <SkillTag>IntelliJ</SkillTag>

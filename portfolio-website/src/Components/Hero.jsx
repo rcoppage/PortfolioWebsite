@@ -12,7 +12,7 @@ const Hero = () => (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center">
         <h1 className="text-5xl font-bold mb-6 text-white">Hi, I'm Robert Coppage</h1>
-        <p className="text-xl text-gray-200 mb-8">AI Researcher | Full Stack Developer</p>
+        <p className="text-xl text-gray-200 mb-8">AI Researcher | Applications Engineer</p>
         <a
           href="#projects"
           className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700"
