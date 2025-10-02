@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ReactLogo from '/assets/reactlogo.png';
 import CanvasLogo from '/assets/CanvasLogo.png'
 import PythonLogo from '/assets/PythonLogo.png';
 
 const Projects = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      observer.observe(projectsSection);
+    }
+
+    return () => {
+      if (projectsSection) {
+        observer.unobserve(projectsSection);
+      }
+    };
+  }, []);
   const projects = [
     {
       title: "Budgetly",
@@ -74,10 +97,22 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">My Projects</h2>
+        <h2 className={`text-3xl font-bold mb-12 text-center transition-all duration-1000 ${
+          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}>
+          My Projects
+        </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <div
+              key={index}
+              className={`transition-all duration-1000 ${
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+              }`}
+              style={{ transitionDelay: `${(index + 1) * 0.2}s` }}
+            >
+              <ProjectCard {...project} />
+            </div>
           ))}
         </div>
       </div>
