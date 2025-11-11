@@ -79,7 +79,7 @@ const Projects = () => {
       imageClassName: "w-48 h-48", // Custom image size
       imageUrl: "/assets/PythonLogo.png",
       githubLink: "https://github.com/itsdylon/redirx",
-      websiteLink: "https://redirx-iota.vercel.app/"
+      websiteLink: "https://www.redirx.dev/"
     },
     {
       title: "Portfolio Website",
