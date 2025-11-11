@@ -30,6 +30,18 @@ const Projects = () => {
   }, []);
   const projects = [
     {
+      title: "Code Word",
+      description: `Code Word is a browser-based word guessing game built with React that challenges players to 
+      discover a hidden 4-letter English word. Players receive feedback on how many letters are correctly aligned 
+      with the target word. The game features a clean, responsive design and includes daily challenges powered by 
+      a custom API I built for word storage and retrieval. Word validity is verified through an external dictionary 
+      API to ensure all guesses are real English words.`,
+      tags: ["React", "JavaScript", "Node.js", "API", "CSS"],
+      imageUrl: "/src/assets/CodeWord.png",
+      imageClassName: "w-64 h-64",
+      websiteLink: "https://code-word.vercel.app/"
+    },
+    {
       title: "Budgetly",
       description: `Budgetly is a comprehensive personal finance platform that transforms traditional budgeting with 
       intelligent analytics and AI-powered insights. Built on the MERN stack with Firebase for secure authentication, 

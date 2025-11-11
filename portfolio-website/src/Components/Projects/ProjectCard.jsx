@@ -37,16 +37,18 @@ const ProjectCard = ({
           </span>
         ))}
       </div>
-      <div className={`grid ${websiteLink ? 'grid-cols-2' : 'grid-cols-1'} gap-4`}>
-        <a 
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 hover:shadow-lg"
-        >
-          <Github size={20} />
-          View GitHub
-        </a>
+      <div className={`grid ${websiteLink ? (githubLink ? 'grid-cols-2' : 'grid-cols-1') : 'grid-cols-1'} gap-4`}>
+        {githubLink && (
+          <a 
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 hover:shadow-lg"
+          >
+            <Github size={20} />
+            View GitHub
+          </a>
+        )}
         {websiteLink && (
           <a 
             href={websiteLink}
