@@ -37,7 +37,7 @@ const Projects = () => {
       a custom API I built for word storage and retrieval. Word validity is verified through an external dictionary 
       API to ensure all guesses are real English words.`,
       tags: ["React", "JavaScript", "Node.js", "API", "CSS"],
-      imageUrl: "/src/assets/CodeWord.png",
+      imageUrl: "/assets/CodeWord.png",
       imageClassName: "w-64 h-64",
       websiteLink: "https://code-word.vercel.app/"
     },
