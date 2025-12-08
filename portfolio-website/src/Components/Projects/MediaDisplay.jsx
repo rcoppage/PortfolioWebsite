@@ -9,16 +9,14 @@ const MediaDisplay = ({
 }) => {
   if (youtubeVideoId) {
     return (
-      <div className={`youtube-video-container w-full h-full ${className}`}>
-        <iframe
-          className="w-full h-full"
-          src={`https://www.youtube.com/embed/${youtubeVideoId}?rel=0`}
-          title={title || "YouTube video player"}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
+      <iframe
+        className={`absolute top-0 left-0 w-full h-full ${className}`}
+        src={`https://www.youtube.com/embed/${youtubeVideoId}?rel=0`}
+        title={title || "YouTube video player"}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
     );
   }
 

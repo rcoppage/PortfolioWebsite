@@ -13,16 +13,26 @@ const ProjectCard = ({
   websiteLink 
 }) => (
   <div className="group bg-white p-8 rounded-lg shadow-md flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]">
-    <div className="w-full aspect-video mb-6 overflow-hidden rounded-lg">
-      <div className="transition-transform duration-300 group-hover:scale-105">
+    <div className="w-full aspect-video mb-6 overflow-hidden rounded-lg relative bg-gray-100">
+      {youtubeId ? (
         <MediaDisplay 
           youtubeVideoId={youtubeId}
           imageUrl={imageUrl}
           title={`${title} demo`}
           className="rounded-lg"
-          imageClassName={imageClassName} // Pass it to MediaDisplay
+          imageClassName={imageClassName}
         />
-      </div>
+      ) : (
+        <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-105">
+          <MediaDisplay 
+            youtubeVideoId={youtubeId}
+            imageUrl={imageUrl}
+            title={`${title} demo`}
+            className="rounded-lg"
+            imageClassName={imageClassName}
+          />
+        </div>
+      )}
     </div>
     <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-blue-600">{title}</h3>
     <p className="text-gray-600 mb-6 flex-grow transition-colors duration-300 group-hover:text-gray-700">{description}</p>
