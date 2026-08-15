@@ -1,73 +1,26 @@
-import { useEffect, useState } from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 
-const Contact = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      observer.observe(contactSection);
-    }
-
-    return () => {
-      if (contactSection) {
-        observer.unobserve(contactSection);
-      }
-    };
-  }, []);
-
-  return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className={`text-3xl font-bold mb-12 text-center transition-all duration-1000 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}>
-          Get In Touch
-        </h2>
-        <div className="max-w-2xl mx-auto">
-          <div className={`flex justify-center space-x-8 transition-all duration-1000 ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`} style={{ transitionDelay: '0.2s' }}>
-            <a 
-              href="https://github.com/rcoppage" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-4 rounded-full bg-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-110 hover:bg-gray-900 hover:text-white"
-              aria-label="GitHub Profile"
-            >
-              <Github size={32} className="transition-transform duration-300 group-hover:scale-110" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/rcoppage/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group p-4 rounded-full bg-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-110 hover:bg-blue-600 hover:text-white"
-              aria-label="LinkedIn Profile"
-            >
-              <Linkedin size={32} className="transition-transform duration-300 group-hover:scale-110" />
-            </a>
-            <a 
-              href="mailto:rcoppage6@gatech.edu"
-              className="group p-4 rounded-full bg-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-110 hover:bg-red-500 hover:text-white"
-              aria-label="Send Email"
-            >
-              <Mail size={32} className="transition-transform duration-300 group-hover:scale-110" />
-            </a>
+const Contact = () => (
+  <section id="contact" className="bg-slate-950 text-white scroll-mt-16">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+      <div className="rounded-2xl border border-slate-700 bg-slate-900 p-7 sm:p-10 md:p-12">
+        <p className="section-kicker">Let&apos;s talk</p>
+        <div className="grid md:grid-cols-[1fr_auto] gap-8 md:items-end">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Building a serious product or AI platform?</h2>
+            <p className="max-w-2xl text-lg leading-relaxed text-slate-300">I&apos;m interested in software engineering, backend, full-stack, and AI engineering conversations where reliability and user impact matter.</p>
           </div>
+          <a href="mailto:rcoppage6@gatech.edu" className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-500 transition-colors whitespace-nowrap">Email Reece <ArrowUpRight size={18} aria-hidden="true" /></a>
+        </div>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 mt-10 pt-7 border-t border-slate-700 text-sm">
+          <a href="mailto:rcoppage6@gatech.edu" className="inline-flex items-center gap-2 text-slate-300 hover:text-white"><Mail size={18} aria-hidden="true" />rcoppage6@gatech.edu</a>
+          <a href="https://www.linkedin.com/in/rcoppage/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-300 hover:text-white"><Linkedin size={18} aria-hidden="true" />LinkedIn</a>
+          <a href="https://github.com/rcoppage" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-300 hover:text-white"><Github size={18} aria-hidden="true" />GitHub</a>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+    <footer className="border-t border-slate-800 py-6 text-center text-sm text-slate-500">Designed and built by Reece Coppage.</footer>
+  </section>
+);
 
 export default Contact;

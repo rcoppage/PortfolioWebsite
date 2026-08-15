@@ -2,30 +2,14 @@ import { useEffect, useState } from 'react';
 import headshot from '../assets/Headshot.jpg';
 import './About.css';
 
-const SkillTag = ({ children, index }) => (
-  <span 
-    className="skill-tag"
-    style={{ 
-      animationDelay: `${index * 0.1}s`,
-      opacity: 0,
-      transform: 'translateY(20px)',
-      animation: 'fadeInUp 0.6s ease-out forwards'
-    }}
-  >
+const SkillTag = ({ children }) => (
+  <span className="skill-tag">
     {children}
   </span>
 );
 
-const CourseCard = ({ title, index }) => (
-  <div 
-    className="course-card"
-    style={{ 
-      animationDelay: `${index * 0.1}s`,
-      opacity: 0,
-      transform: 'translateY(20px)',
-      animation: 'fadeInUp 0.6s ease-out forwards'
-    }}
-  >
+const CourseCard = ({ title }) => (
+  <div className="course-card">
     <h4 className="card-title">{title}</h4>
   </div>
 );
@@ -65,29 +49,27 @@ const About = () => {
   const dataTools = ['Kibana', 'Grafana', 'OpenSearch', 'FullStory', 'Looker', 'MongoDB', 'Firebase'];
 
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="about-section scroll-mt-16">
       <div className="container">
-        <h2 className={`main-title ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          About Me
-          <div className="title-underline"></div>
-        </h2>
+        <p className="section-kicker text-center">About</p>
+        <h2 className={`main-title ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>Engineer, researcher, teammate</h2>
         
         <div className="two-columns">
           {/* Left Column */}
           <div className="column">
             <div className="profile-wrapper">
               <div className={`profile-image ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                <img src={headshot} alt="Profile" className="image" />
+                <img src={headshot} alt="Reece Coppage" className="image" loading="lazy" decoding="async" />
               </div>
             </div>
             
             <div className={isVisible ? 'animate-fade-in-up' : 'opacity-0'}>
-              <SectionTitle>Who I Am</SectionTitle>
+              <SectionTitle>How I work</SectionTitle>
               <p className="bio">
-                I am a software engineer and Computer Science student at Georgia Tech, graduating in December 2026 with a 3.6 GPA.
+                I am a software engineer and Computer Science student at Georgia Tech, graduating in December 2026 with a 3.6 GPA. My work sits at the intersection of AI systems, full-stack product engineering, and production reliability.
               </p>
               <p className="bio">
-                At Waystar, I lead development of production AI chatbot infrastructure for healthcare billing, including RAG, multi-tool agents, evaluation workflows, and persistent conversations. I also research computer vision at Georgia Tech, fine-tuning models to recognize campus landmarks from street-level imagery.
+                At Waystar, I lead development of production AI chatbot infrastructure for healthcare billing. I care about the parts that turn a demo into a dependable product: evaluation, observability, state, tool-call tracing, latency, and cost. At Georgia Tech, I research computer vision for campus landmark recognition.
               </p>
             </div>
           </div>
@@ -100,8 +82,8 @@ const About = () => {
                 <div className="skill-category">
                   <h4 className="category-title">Programming Languages</h4>
                   <div className="tags-wrapper">
-                    {programmingLanguages.map((lang, index) => (
-                      <SkillTag key={lang} index={index}>{lang}</SkillTag>
+                    {programmingLanguages.map(lang => (
+                      <SkillTag key={lang}>{lang}</SkillTag>
                     ))}
                   </div>
                 </div>
@@ -109,8 +91,8 @@ const About = () => {
                 <div className="skill-category">
                   <h4 className="category-title">AI & LLM Systems</h4>
                   <div className="tags-wrapper">
-                    {aiSkills.map((skill, index) => (
-                      <SkillTag key={skill} index={index + programmingLanguages.length + technologies.length}>{skill}</SkillTag>
+                    {aiSkills.map(skill => (
+                      <SkillTag key={skill}>{skill}</SkillTag>
                     ))}
                   </div>
                 </div>
@@ -118,8 +100,8 @@ const About = () => {
                 <div className="skill-category">
                   <h4 className="category-title">Technologies & Frameworks</h4>
                   <div className="tags-wrapper">
-                    {technologies.map((tech, index) => (
-                      <SkillTag key={tech} index={index + programmingLanguages.length}>{tech}</SkillTag>
+                    {technologies.map(tech => (
+                      <SkillTag key={tech}>{tech}</SkillTag>
                     ))}
                   </div>
                 </div>
@@ -127,8 +109,8 @@ const About = () => {
                 <div className="skill-category">
                   <h4 className="category-title">Observability & Data</h4>
                   <div className="tags-wrapper">
-                    {dataTools.map((tool, index) => (
-                      <SkillTag key={tool} index={index + programmingLanguages.length + technologies.length + aiSkills.length}>{tool}</SkillTag>
+                    {dataTools.map(tool => (
+                      <SkillTag key={tool}>{tool}</SkillTag>
                     ))}
                   </div>
                 </div>
@@ -138,8 +120,8 @@ const About = () => {
             <div className="courses-section">
               <SectionTitle>Education</SectionTitle>
               <div className="courses-grid">
-                <CourseCard title="Georgia Institute of Technology" index={0} />
-                <CourseCard title="B.S. Computer Science · GPA 3.6 · Dec 2026" index={1} />
+                <CourseCard title="Georgia Institute of Technology" />
+                <CourseCard title="B.S. Computer Science · GPA 3.6 · Dec 2026" />
               </div>
             </div>
           </div>

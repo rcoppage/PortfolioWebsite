@@ -1,132 +1,81 @@
-import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 
-const Projects = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const projects = [
+  {
+    title: 'Budgetly',
+    eyebrow: 'AI-powered finance platform',
+    description: 'A personal finance platform that combines budgeting, savings planning, meal planning, and machine-learning stock recommendations in one product.',
+    highlights: [
+      'Built a MERN architecture with Firebase authentication and MongoDB Atlas data storage.',
+      'Integrated PyTorch recommendations, WebSocket updates, and AWS-hosted services.'
+    ],
+    tags: ['React', 'Node.js', 'MongoDB', 'PyTorch', 'Firebase', 'AWS'],
+    youtubeId: 'GPAKiE4Bozk',
+    githubLink: 'https://github.com/rcoppage/Hacklytics2025',
+    websiteLink: 'https://devpost.com/software/pocketwise',
+    websiteLabel: 'View case study'
+  },
+  {
+    title: 'RedireX',
+    eyebrow: 'Website migration automation',
+    description: 'A link-redirection platform that maps legacy URLs to new destinations to reduce disruption and preserve SEO during site migrations.',
+    highlights: [
+      'Automated URL discovery and redirection matching with a Python backend.',
+      'Deployed backend services on Google Cloud with a React web interface.'
+    ],
+    tags: ['Python', 'Google Cloud', 'React', 'JavaScript'],
+    imageUrl: '/assets/PythonLogo.png',
+    imageAlt: 'Python logo representing the RedireX backend',
+    githubLink: 'https://github.com/itsdylon/redirx',
+    websiteLink: 'https://www.redirx.dev/',
+    websiteLabel: 'Visit RedireX'
+  },
+  {
+    title: 'Code Word',
+    eyebrow: 'Daily browser game',
+    description: 'A responsive word-guessing game with daily challenges, exact-position feedback, and server-backed word retrieval.',
+    highlights: [
+      'Designed a custom API for daily word storage and retrieval.',
+      'Added external dictionary validation to reject invalid guesses.'
+    ],
+    tags: ['React', 'Node.js', 'REST API', 'JavaScript'],
+    imageUrl: '/assets/CodeWord.png',
+    imageAlt: 'Code Word game interface',
+    websiteLink: 'https://code-word.vercel.app/',
+    websiteLabel: 'Play Code Word'
+  },
+  {
+    title: 'WanderSync',
+    eyebrow: 'Collaborative Android application',
+    description: 'A travel-planning application for shared itineraries, accommodations, dining reservations, and community trip updates.',
+    highlights: [
+      'Used MVVM architecture to separate UI, state, and data concerns.',
+      'Implemented Firebase authentication and real-time trip synchronization.'
+    ],
+    tags: ['Java', 'Android', 'Firebase', 'MVVM'],
+    youtubeId: 'NedWm73jRhI',
+    githubLink: 'https://github.com/tmalayvong/CS2340C_Team51',
+    websiteLink: 'https://tmalayvong.github.io/CS2340C_Team51/',
+    websiteLabel: 'View project'
+  }
+];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      observer.observe(projectsSection);
-    }
-
-    return () => {
-      if (projectsSection) {
-        observer.unobserve(projectsSection);
-      }
-    };
-  }, []);
-  const projects = [
-    {
-      title: "Code Word",
-      description: `Code Word is a browser-based word guessing game built with React that challenges players to 
-      discover a hidden 4-letter English word. Players receive feedback on how many letters are correctly aligned 
-      with the target word. The game features a clean, responsive design and includes daily challenges powered by 
-      a custom API I built for word storage and retrieval. Word validity is verified through an external dictionary 
-      API to ensure all guesses are real English words.`,
-      tags: ["React", "JavaScript", "Node.js", "API", "CSS"],
-      imageUrl: "/assets/CodeWord.png",
-      imageClassName: "w-64 h-64",
-      websiteLink: "https://code-word.vercel.app/"
-    },
-    {
-      title: "Budgetly",
-      description: `Budgetly is a comprehensive personal finance platform that transforms traditional budgeting with 
-      intelligent analytics and AI-powered insights. Built on the MERN stack with Firebase for secure authentication, 
-      it offers goal-based savings calculators, customizable budget templates, AI meal planning based on dietary preferences 
-      and budget constraints, and machine learning stock recommendations using PyTorch. Developed by our team inspired by 
-      our own financial challenges during college, Budgetly goes beyond simple expense tracking to provide actionable 
-      financial guidance through an integrated ecosystem hosted on AWS via MongoAtlas, with real-time updates 
-      via WebSocket implementation.`,
-      tags: ["MongoDB Atlas", "Firebase", "PyTorch", "React", "Node", "Express", "Python", "JavaScript"],
-      youtubeId: "GPAKiE4Bozk",
-      githubLink: "https://github.com/rcoppage/Hacklytics2025",
-      websiteLink: "https://devpost.com/software/pocketwise"
-    },
-    {
-      title: "DayWeave (In Development)",
-      description: `Dayweave is a smart scheduling platform that integrates Python with Canvas to automatically 
-      generate a personalized calendar. Using Firebase for secure authentication, MongoDB for user data, and a 
-      React-based frontend, Dayweave provides a seamless experience. It allows users to add assignments, automatically 
-      schedule time for them, and adjusts weekly based on user feedback to ensure an optimized workload.`,
-      tags: ["Python", "Firebase", "MongoDB", "React", "Node.js", "JavaScript", "CSS"],
-      imageClassName: "w-64 h-64", // Custom image size
-      imageUrl: "/assets/CanvasLogo.png",
-      githubLink: "https://github.com/DayWeave/DayWeave"
-      // No websiteLink for this project, so it will only show GitHub button
-    },
-    {
-      title: "RedireX",
-      description: `RedireX is a dynamic link redirection platform designed to facilitate seamless 
-      website migrations. The backend is on Google Cloud, and the platform is built with React for the web interface and powered by Python for scraping 
-      and redirection, RedireX efficiently extracts old URLs from a website and redirects them to the corresponding 
-      new URLs. This ensures minimal disruption, preserves SEO rankings, and enhances user experience during domain 
-      changes or site restructures. RedireX automates the redirection process with precision, making website transitions 
-      effortless and efficient.`,
-      tags: ["Python", "Google Cloud", "React", "JavaScript", "CSS", "HTML"],
-      imageClassName: "w-48 h-48", // Custom image size
-      imageUrl: "/assets/PythonLogo.png",
-      githubLink: "https://github.com/itsdylon/redirx",
-      websiteLink: "https://www.redirx.dev/"
-    },
-    {
-      title: "Portfolio Website",
-      description: `This very website you're exploring! Built with React, 
-      leveraging modern JavaScript and styled with CSS for a clean, responsive design. `,
-      tags: ["React", "Node.js", "JavaScript", "CSS", "HTML"],
-      imageUrl: "/assets/reactlogo.png",
-      imageClassName: "w-64 h-64", // Custom image size
-      githubLink: "https://github.com/rcoppage/PortfolioWebsite"
-      // No websiteLink for this project, so it will only show GitHub button
-    },
-    {
-      title: "WanderSync",
-      description: `WanderSync is a collaborative travel management application developed using Android Studio,
-       Java, and Firebase. The app features real-time trip synchronization, secure user authentication, and comprehensive 
-       travel planning tools. Key features include interactive itinerary creation, accommodation booking management, 
-       dining reservation tracking, and a unique travel community platform where users can share their experiences. 
-       Implemented using MVVM architecture pattern for enhanced scalability and testability, while utilizing Firebase 
-       for seamless real-time data synchronization and user authentication.`,
-      tags: ["Java", "Android Studio", "Firebase"],
-      youtubeId: "NedWm73jRhI",
-      githubLink: "https://github.com/tmalayvong/CS2340C_Team51",
-      websiteLink: "https://tmalayvong.github.io/CS2340C_Team51/"
-    }
-  ];
-
-  return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className={`text-3xl font-bold mb-12 text-center transition-all duration-1000 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}>
-          My Projects
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`transition-all duration-1000 ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-              }`}
-              style={{ transitionDelay: `${(index + 1) * 0.2}s` }}
-            >
-              <ProjectCard {...project} />
-            </div>
-          ))}
+const Projects = () => (
+  <section id="projects" className="py-20 sm:py-24 bg-slate-50 scroll-mt-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <p className="section-kicker">Selected work</p>
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+        <div>
+          <h2 className="section-heading">Engineering beyond the day job</h2>
+          <p className="section-intro">Four projects selected for technical breadth, working demos, and clear implementation depth.</p>
         </div>
+        <a href="https://github.com/rcoppage" target="_blank" rel="noreferrer" className="text-sm font-semibold text-blue-700 hover:text-blue-900 whitespace-nowrap">See all GitHub repositories →</a>
       </div>
-    </section>
-  );
-};
+      <div className="grid lg:grid-cols-2 gap-7">
+        {projects.map(project => <ProjectCard key={project.title} {...project} />)}
+      </div>
+    </div>
+  </section>
+);
 
 export default Projects;

@@ -1,8 +1,19 @@
-# React + Vite
+# Reece Coppage - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A recruiter-focused engineering portfolio built with React, Vite, and Tailwind CSS. It presents production engineering experience, measurable impact, selected projects, technical skills, and direct contact paths.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+The production build is written to `dist/`. Run `npm run deploy` to publish that build with `gh-pages`.

@@ -1,77 +1,39 @@
-import { Github, Globe } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
 import MediaDisplay from './MediaDisplay';
 
-const ProjectCard = ({ 
-  title, 
-  description, 
-  tags, 
-  youtubeId, 
-  imageUrl, 
-  imageClassName = '', // Accept imageClassName prop
-  githubLink, 
-  websiteLink 
+const ProjectCard = ({
+  title,
+  eyebrow,
+  description,
+  highlights,
+  tags,
+  youtubeId,
+  imageUrl,
+  imageAlt,
+  githubLink,
+  websiteLink,
+  websiteLabel = 'View project'
 }) => (
-  <div className="group bg-white p-8 rounded-lg shadow-md flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]">
-    <div className="w-full aspect-video mb-6 overflow-hidden rounded-lg relative bg-gray-100">
-      {youtubeId ? (
-        <MediaDisplay 
-          youtubeVideoId={youtubeId}
-          imageUrl={imageUrl}
-          title={`${title} demo`}
-          className="rounded-lg"
-          imageClassName={imageClassName}
-        />
-      ) : (
-        <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-105">
-          <MediaDisplay 
-            youtubeVideoId={youtubeId}
-            imageUrl={imageUrl}
-            title={`${title} demo`}
-            className="rounded-lg"
-            imageClassName={imageClassName}
-          />
-        </div>
-      )}
+  <article className="group bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-200/70">
+    <div className="w-full aspect-video overflow-hidden relative bg-slate-100 border-b border-slate-100">
+      <MediaDisplay youtubeVideoId={youtubeId} imageUrl={imageUrl} alt={imageAlt} title={`${title} demo`} />
     </div>
-    <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-blue-600">{title}</h3>
-    <p className="text-gray-600 mb-6 flex-grow transition-colors duration-300 group-hover:text-gray-700">{description}</p>
-    <div className="space-y-4">
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag, index) => (
-          <span 
-            key={index} 
-            className="bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-blue-100 hover:text-blue-700 hover:scale-105"
-          >
-            {tag}
-          </span>
-        ))}
+    <div className="p-6 sm:p-7 flex flex-col flex-grow">
+      <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700 mb-2">{eyebrow}</p>
+      <h3 className="text-2xl font-bold tracking-tight mb-3 group-hover:text-blue-700 transition-colors">{title}</h3>
+      <p className="text-slate-600 leading-relaxed mb-5">{description}</p>
+      <ul className="space-y-2 text-sm text-slate-700 mb-6">
+        {highlights.map(highlight => <li key={highlight} className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-blue-600" aria-hidden="true" /><span>{highlight}</span></li>)}
+      </ul>
+      <div className="flex flex-wrap gap-2 mt-auto mb-6">
+        {tags.map(tag => <span key={tag} className="bg-slate-100 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700">{tag}</span>)}
       </div>
-      <div className={`grid ${websiteLink ? (githubLink ? 'grid-cols-2' : 'grid-cols-1') : 'grid-cols-1'} gap-4`}>
-        {githubLink && (
-          <a 
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 hover:shadow-lg"
-          >
-            <Github size={20} />
-            View GitHub
-          </a>
-        )}
-        {websiteLink && (
-          <a 
-            href={websiteLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-lg"
-          >
-            <Globe size={20} />
-            View Website
-          </a>
-        )}
+      <div className="flex flex-wrap items-center gap-4 border-t border-slate-100 pt-5">
+        {websiteLink && <a href={websiteLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 hover:text-blue-900">{websiteLabel}<ArrowUpRight size={16} aria-hidden="true" /></a>}
+        {githubLink && <a href={githubLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-slate-950"><Github size={16} aria-hidden="true" />Source code</a>}
       </div>
     </div>
-  </div>
+  </article>
 );
 
 export default ProjectCard;
