@@ -4,8 +4,7 @@ const MediaDisplay = ({
   alt = 'Media content', 
   title,
   className = '',
-  imageClassName = '',
-  videoOptions = {}
+  imageClassName = ''
 }) => {
   if (youtubeVideoId) {
     return (

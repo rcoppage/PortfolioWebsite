@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
-import ReactLogo from '/assets/reactlogo.png';
-import CanvasLogo from '/assets/CanvasLogo.png'
-import PythonLogo from '/assets/PythonLogo.png';
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);

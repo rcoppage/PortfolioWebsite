@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import Navigation from './Components/Navigation';
 import Hero from './Components/Hero';
 import About from './Components/About';
+import Experience from './Components/Experience';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact';
 
@@ -27,6 +28,7 @@ function App() {
       <Navigation />
       <Hero />
       <About />
+      <Experience />
       <Projects />
       <Contact />
       

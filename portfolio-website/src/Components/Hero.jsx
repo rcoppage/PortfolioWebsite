@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { ArrowRight, Download } from 'lucide-react';
 import banner from '../assets/banner.jpg';
 
 const Hero = () => {
@@ -27,7 +28,7 @@ const Hero = () => {
             }`}
             style={{ transitionDelay: '0.2s' }}
           >
-            Hi, I'm Robert Coppage
+            Hi, I&apos;m Reece Coppage
           </h1>
           <p 
             className={`text-xl text-gray-200 mb-8 transform transition-all duration-1000 ${
@@ -35,21 +36,30 @@ const Hero = () => {
             }`}
             style={{ transitionDelay: '0.4s' }}
           >
-            AI Researcher | Applications Engineer
+            Software Engineer II building production AI systems
           </p>
-          <a
-            href="#projects"
-            className={`inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transform transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+          <p className={`max-w-2xl mx-auto text-lg text-gray-200 mb-9 transform transition-all duration-1000 ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+          }`} style={{ transitionDelay: '0.55s' }}>
+            I design AI platforms, developer tools, and healthcare products used by thousands of employees and millions of patients.
+          </p>
+          <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 transform transition-all duration-1000 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-            }`}
-            style={{ transitionDelay: '0.6s' }}
+            }`} style={{ transitionDelay: '0.7s' }}>
+          <a
+            href="#experience"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            View My Work
+            View My Experience <ArrowRight size={18} />
           </a>
+          <a href="/Reece_Coppage_Resume.pdf" download className="inline-flex items-center gap-2 border border-white/70 text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+            <Download size={18} /> Download Résumé
+          </a>
+          </div>
         </div>
       </div>
     </section>

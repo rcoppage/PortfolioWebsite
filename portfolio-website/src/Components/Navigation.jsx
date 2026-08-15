@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
@@ -56,6 +56,10 @@ const Navigation = () => {
                 Projects
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
+              <a href="#experience" className="relative group transition-colors duration-300 hover:text-blue-600" onClick={(e) => handleNavClick(e, 'experience')}>
+                Experience
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+              </a>
               <a 
                 href="#contact" 
                 className="relative group transition-colors duration-300 hover:text-blue-600"
@@ -102,6 +106,9 @@ const Navigation = () => {
                 onClick={(e) => handleNavClick(e, 'projects')}
               >
                 Projects
+              </a>
+              <a href="#experience" className="block py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:translate-x-2" onClick={(e) => handleNavClick(e, 'experience')}>
+                Experience
               </a>
               <a 
                 href="#contact" 

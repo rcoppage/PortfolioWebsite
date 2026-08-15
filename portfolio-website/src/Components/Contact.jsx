@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Contact = () => {
@@ -48,7 +48,7 @@ const Contact = () => {
               <Github size={32} className="transition-transform duration-300 group-hover:scale-110" />
             </a>
             <a 
-              href="https://www.linkedin.com/in/robert-coppage-390006311/" 
+              href="https://www.linkedin.com/in/rcoppage/"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-4 rounded-full bg-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-110 hover:bg-blue-600 hover:text-white"
@@ -57,7 +57,7 @@ const Contact = () => {
               <Linkedin size={32} className="transition-transform duration-300 group-hover:scale-110" />
             </a>
             <a 
-              href="mailto:reececoppage@gmail.com"
+              href="mailto:rcoppage6@gatech.edu"
               className="group p-4 rounded-full bg-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-110 hover:bg-red-500 hover:text-white"
               aria-label="Send Email"
             >

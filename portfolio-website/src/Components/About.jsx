@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import headshot from '../assets/Headshot.jpg';
 import './About.css';
 
@@ -59,10 +59,10 @@ const About = () => {
     };
   }, []);
 
-  const programmingLanguages = ['Java', 'Python', 'PHP', 'C#', 'JavaScript', 'HTML', 'CSS', 'SQL', 'C', 'Assembly'];
-  const technologies = ['React.js', 'Vue.js', 'Node.js', 'Firebase', 'TensorFlow', 'MongoDB', 'Amazon AWS'];
-  const devTools = ['Kubernetes', 'Android Studio', 'Unity', 'IntelliJ', 'Visual Studio Code', 'PyCharm', 'Jupyter Notebooks', 'Git', 'Agile'];
-  const courses = ['Data Structures & Algorithms', 'Objects & Design', 'Computer Organization & Programming', 'Linear Algebra', 'Artificial Intelligence', 'Design & Analysis of Algorithms', 'Discrete Mathematics'];
+  const programmingLanguages = ['Python', 'PHP', 'JavaScript', 'Go', 'SQL', 'Java'];
+  const technologies = ['React', 'Vue.js', 'Flask', 'AWS', 'Kubernetes', 'Docker', 'Jenkins'];
+  const aiSkills = ['RAG', 'MCP', 'Google ADK', 'Opik', 'Prompt Engineering', 'Chatbot Evaluation', 'GitHub Copilot Agent Mode'];
+  const dataTools = ['Kibana', 'Grafana', 'OpenSearch', 'FullStory', 'Looker', 'MongoDB', 'Firebase'];
 
   return (
     <section id="about" className="about-section">
@@ -84,13 +84,10 @@ const About = () => {
             <div className={isVisible ? 'animate-fade-in-up' : 'opacity-0'}>
               <SectionTitle>Who I Am</SectionTitle>
               <p className="bio">
-                I am a Computer Science student at Georgia Tech, specializing in Intelligence and Systems/Architecture. 
+                I am a software engineer and Computer Science student at Georgia Tech, graduating in December 2026 with a 3.6 GPA.
               </p>
               <p className="bio">
-              Currently, I work as an Applications Engineer at Waystar and as an Undergraduate Researcher at Georgia Tech, developing AI-powered image recognition for 
-              campus mapping. I recently taught Java and Python programming as an instructor at Enchanting Math Academy. Previously, I founded and operated CircuitCycle, 
-              where I built custom computers from secondhand parts. I thrive in collaborative team environments and am passionate about developing innovative solutions to
-              complex problems.
+                At Waystar, I lead development of production AI chatbot infrastructure for healthcare billing, including RAG, multi-tool agents, evaluation workflows, and persistent conversations. I also research computer vision at Georgia Tech, fine-tuning models to recognize campus landmarks from street-level imagery.
               </p>
             </div>
           </div>
@@ -110,6 +107,15 @@ const About = () => {
                 </div>
 
                 <div className="skill-category">
+                  <h4 className="category-title">AI & LLM Systems</h4>
+                  <div className="tags-wrapper">
+                    {aiSkills.map((skill, index) => (
+                      <SkillTag key={skill} index={index + programmingLanguages.length + technologies.length}>{skill}</SkillTag>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="skill-category">
                   <h4 className="category-title">Technologies & Frameworks</h4>
                   <div className="tags-wrapper">
                     {technologies.map((tech, index) => (
@@ -119,10 +125,10 @@ const About = () => {
                 </div>
 
                 <div className="skill-category">
-                  <h4 className="category-title">Development Tools</h4>
+                  <h4 className="category-title">Observability & Data</h4>
                   <div className="tags-wrapper">
-                    {devTools.map((tool, index) => (
-                      <SkillTag key={tool} index={index + programmingLanguages.length + technologies.length}>{tool}</SkillTag>
+                    {dataTools.map((tool, index) => (
+                      <SkillTag key={tool} index={index + programmingLanguages.length + technologies.length + aiSkills.length}>{tool}</SkillTag>
                     ))}
                   </div>
                 </div>
@@ -130,11 +136,10 @@ const About = () => {
             </div>
             
             <div className="courses-section">
-              <SectionTitle>Relevant Coursework</SectionTitle>
+              <SectionTitle>Education</SectionTitle>
               <div className="courses-grid">
-                {courses.map((course, index) => (
-                  <CourseCard key={course} title={course} index={index} />
-                ))}
+                <CourseCard title="Georgia Institute of Technology" index={0} />
+                <CourseCard title="B.S. Computer Science · GPA 3.6 · Dec 2026" index={1} />
               </div>
             </div>
           </div>
